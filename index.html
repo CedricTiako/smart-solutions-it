@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SMART SOLUTION IT offre des solutions numériques complètes et des formations spécialisées pour optimiser la présence en ligne des entreprises camerounaises et développer leurs compétences techniques et marketing.">
+    <meta name="author" content="SMART SOLUTION IT">
+    <meta property="og:title" content="SMART SOLUTION IT">
+    <meta property="og:description" content="SMART SOLUTION IT offre des solutions numériques complètes et des formations spécialisées pour optimiser la présence en ligne des entreprises camerounaises.">
+    <meta property="og:image" content="images/og-image.jpg">
+    <meta property="og:url" content="https://smart-solutions-it.vercel.app">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>SMART SOLUTION IT</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="canonical" href="https://smart-solutions-it.vercel.app/">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SMART SOLUTION IT",
+        "url": "https://smart-solutions-it.vercel.app",
+        "logo": "https://smart-solutions-it.vercel.app/images/logo.png",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+237 677 334 686",
+            "contactType": "Customer Service"
+        }
+    }
+    </script>
+    <style>
+        /* Styles personnalisés */
+        .hover-effect:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Réactivité pour le menu mobile */
+        #mobile-menu {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            #mobile-menu {
+                display: flex;
+            }
+        }
+
+        /* Styles pour les icônes de services */
+        .icon-container {
+            width: 80px;
+            height: 80px;
+            background-color: #e2e8f0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .service-icon {
+            width: 50%;
+            height: 50%;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        /* Styles pour les cartes de service */
+        .service-card {
+            border: 2px solid transparent;
+            border-radius: 15px;
+            transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            border-color: #1E3A8A; /* Bleu primaire */
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(30, 58, 138, 0.2); /* Ombre bleutée */
+        }
+
+        .service-card:hover .icon-container {
+            background-color: #1E3A8A; /* Bleu primaire */
+            transform: rotate(360deg);
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.2);
+        }
+
+        /* Harmonisation des couleurs */
+        .bg-blue-900 {
+            background-color: #1E3A8A; /* Bleu primaire */
+        }
+
+        .bg-yellow-500 {
+            background-color: #F59E0B; /* Jaune doré */
+        }
+
+        .hover:bg-yellow-400 {
+            background-color: #FBBF24; /* Jaune plus clair */
+        }
+
+        .hover:text-yellow-400 {
+            color: #F59E0B; /* Jaune doré */
+        }
+
+        .text-yellow-400 {
+            color: #F59E0B; /* Jaune doré */
+        }
+
+        .text-green-900 {
+            color: #065F46; /* Vert foncé */
+        }
+
+        .bg-gradient-to-r {
+            background: linear-gradient(to right, #065F46, #059669); /* Dégradé de vert foncé à vert vif */
+        }
+
+        .bg-gray-50 {
+            background-color: #F9FAFB; /* Gris très clair */
+        }
+
+        .bg-white {
+            background-color: #FFFFFF; /* Blanc pur */
+        }
+
+        .bg-gray-100 {
+            background-color: #F3F4F6; /* Gris clair */
+        }
+
+        .bg-orange-500 {
+            background-color: #EA580C; /* Orange vif */
+        }
+        body {
+    overflow-x: hidden;
+}
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1E3A8A; /* Bleu primaire */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none; /* Caché par défaut */
+}
+
+.scroll-to-top:hover {
+    background-color: #F59E0B; /* Jaune doré */
+}
+
+    </style>
+</head>
+<button id="scrollToTopBtn" class="scroll-to-top">
+    <i class="fas fa-chevron-up"></i>
+</button>
+
+<body class="font-sans bg-gray-100">
+
+    <header class="bg-blue-900 text-white p-4">
+        <div class="container mx-auto flex items-center justify-between">
+            <h1 class="text-3xl font-bold">SMART <span class="text-yellow-400">SOLUTION IT</span></h1>
+            <!-- Navigation pour les grands écrans -->
+            <nav class="hidden md:flex space-x-4">
+                <a href="#home" class="hover:text-yellow-400">Accueil</a>
+                <a href="#services" class="hover:text-yellow-400">Services</a>
+                <a href="#about" class="hover:text-yellow-400">À Propos</a>
+                <a href="#contact" class="hover:text-yellow-400">Contact</a>
+            </nav>
+            <!-- Menu hamburger pour les petits écrans -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-yellow-400 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Menu déroulant pour les petits écrans -->
+        <div id="menu" class="hidden md:hidden mt-4 bg-blue-900 text-white">
+            <a href="#home" class="block px-4 py-2 hover:bg-yellow-400">Accueil</a>
+            <a href="#services" class="block px-4 py-2 hover:bg-yellow-400">Services</a>
+            <a href="#about" class="block px-4 py-2 hover:bg-yellow-400">À Propos</a>
+            <a href="#contact" class="block px-4 py-2 hover:bg-yellow-400">Contact</a>
+        </div>
+    </header>
+    
+    <script>
+        // Toggle menu pour les petits écrans
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+    
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-gradient-to-r from-green-900 to-green-700 text-white h-screen flex items-center justify-center text-center p-8">
+        <div data-aos="fade-up">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Bienvenue chez SMART SOLUTION IT</h1>
+            <p class="text-lg md:text-xl mb-8">Nous fournissons des solutions numériques complètes et des formations spécialisées pour transformer la présence en ligne des entreprises camerounaises et développer leurs compétences.</p>
+            <div class="mb-8">
+                <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg" class="mx-auto">
+                  <circle cx="50" cy="50" r="40" stroke="#F5A623" stroke-width="4" fill="none">
+                    <animate attributeName="stroke-dasharray" from="0, 251" to="251, 0" dur="1.5s" repeatCount="indefinite" />
+                  </circle>
+                </svg>
+              </div>
+            <a href="#contact" class="bg-yellow-500 text-green-900 py-3 px-6 rounded-full text-lg font-bold hover:bg-yellow-400 transition duration-300 hover-effect">Contactez-nous</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-right">Nos Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Cards -->
+                <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden text-center p-6" data-aos="fade-up">
+                    <div class="icon-container mx-auto mb-4">
+                        <img src="images/strategie-numerique.png" alt="Consultation en Stratégie Numérique" class="service-icon">
+                    </div>
+                    <h3 class="text-xl font-bold text-green-700 mb-4">Consultation en Stratégie Numérique</h3>
+                    <p class="text-gray-600">Développement de stratégies numériques sur mesure, audit technique et recommandations pour améliorer votre présence en ligne.</p>
+                </div>
+                <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden text-center p-6" data-aos="fade-up">
+                    <div class="icon-container mx-auto mb-4">
+                        <img src="images/developpement-dapplications.png" alt="Développement Web et Mobile" class="service-icon">
+                    </div>
+                    <h3 class="text-xl font-bold text-green-700 mb-4">Développement Web et Mobile</h3>
+                    <p class="text-gray-600">Création de sites web fonctionnels, applications mobiles natives et hybrides, ainsi que solutions d'intégration et d'automatisation des processus métier.</p>
+                </div>
+                <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden text-center p-6" data-aos="fade-up">
+                    <div class="icon-container mx-auto mb-4">
+                        <img src="images/referencement.png" alt="Référencement et SEO" class="service-icon">
+                    </div>
+                    <h3 class="text-xl font-bold text-green-700 mb-4">Référencement et SEO</h3>
+                    <p class="text-gray-600">Optimisation des moteurs de recherche, campagnes publicitaires ciblées et conseils en marketing digital pour accroître votre visibilité en ligne.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Team Section -->
+    <section id="team" class="py-16 bg-gray-50">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold text-green-700 mb-12" data-aos="fade-left">Notre Équipe</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-lg p-6 shadow-lg" data-aos="fade-up">
+                    <img src="images/cedric.png" alt="Nom du membre" class="w-32 h-32 mx-auto rounded-full mb-4">
+                    <h3 class="text-xl font-bold text-green-700 mb-4">Tiako Tchouameni Cedric Aime</h3>
+                        <p class="text-gray-600">Fondateur et Consultant Principal. Spécialiste en stratégie numérique et développement web.</p>
+                    
+                </div>
+                <!-- Répétez ce bloc pour chaque membre de l'équipe -->
+            </div>
+        </div>
+    </section>
+
+<!-- Special Offer Section -->
+<section id="special-offer" class="py-16 bg-yellow-100">
+    <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold text-green-700 mb-8" data-aos="fade-right">Offre Spéciale</h2>
+        <p class="text-lg text-gray-700 mb-6">Profitez de notre offre spéciale pour un temps limité !</p>
+        <a href="#" class="bg-yellow-500 text-white px-6 py-3 rounded-lg hover:bg-yellow-600">En savoir plus</a>
+    </div>
+</section>
+
+<!-- Newsletter Section -->
+<section id="newsletter" class="py-16 bg-gray-900 text-white">
+    <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-8" data-aos="fade-left">Inscrivez-vous à notre Newsletter</h2>
+        <form class="w-full max-w-md mx-auto">
+            <input type="email" placeholder="Votre email" class="w-full p-3 rounded-lg text-gray-900 mb-4">
+            <button class="bg-yellow-500 text-white px-6 py-3 rounded-lg hover:bg-yellow-600">S'inscrire</button>
+        </form>
+    </div>
+</section>
+
+<!-- Partners Section -->
+<section id="partners" class="py-16 bg-gray-50">
+    <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold text-green-700 mb-12" data-aos="fade-left">Nos Partenaires</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+            <img src="images/partner1.png" alt="Global Services" class="mx-auto" data-aos="fade-up">
+            <img src="images/partner2.png" alt="Zen Africa" class="mx-auto" data-aos="fade-up">
+            <!-- Répétez pour chaque partenaire -->
+        </div>
+    </div>
+</section>
+
+<!-- Location Section -->
+<section id="location" class="py-16 md:py-16 bg-gray-50">
+    <div class="container mx-auto text-center px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl sm:text-3xl font-bold text-green-700 mb-6 md:mb-8" data-aos="fade-left">Notre Localisation</h2>
+        <div class="relative overflow-hidden rounded-lg shadow-lg" style="padding-bottom: 56.25%;">
+            <iframe class="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3083.110012230615!2d9.70884931535358!3d5.748339737568794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x108507b34274fbfb%3A0xd7d2262b265246d5!2sSMART%20SOLUTION%20IT!5e0!3m2!1sfr!2scm!4v1691195724257!5m2!1sfr!2scm"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- About Section -->
+<section id="about" class="py-16 bg-gray-50">
+    <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold text-green-700 mb-8" data-aos="fade-left">À Propos de Nous</h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto" data-aos="fade-right">
+            SMART SOLUTION IT, fondé par Tiako Tchouameni Cedric Aime, est dédié à fournir des solutions numériques complètes 
+            et des formations spécialisées pour optimiser la présence en ligne des entreprises camerounaises et développer 
+            leurs compétences techniques et marketing.
+        </p>
+    </div>
+</section>
+
+
+<!-- Contact Section -->
+<section id="contact" class="py-16 bg-gray-900 text-white">
+    <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-8" data-aos="fade-left">Contactez-Nous</h2>
+        <p class="text-lg mb-6">Nous serions ravis de discuter de vos besoins.</p>
+        <form id="contactForm" class="w-full max-w-md mx-auto">
+            <input type="text" id="name" placeholder="Votre nom" class="w-full p-3 rounded-lg text-gray-900 mb-4">
+            <input type="email" id="email" placeholder="Votre email" class="w-full p-3 rounded-lg text-gray-900 mb-4">
+            <textarea id="message" placeholder="Votre message" class="w-full p-3 rounded-lg text-gray-900 mb-4"></textarea>
+            <button type="button" id="submitBtn" class="bg-yellow-500 text-white px-6 py-3 rounded-lg hover:bg-yellow-600">Envoyer</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-blue-900 text-white py-8">
+    <div class="container mx-auto text-center">
+        <div class="flex justify-center space-x-6 mb-4">
+            <a href="#home" class="hover:text-yellow-400">Accueil</a>
+            <a href="#services" class="hover:text-yellow-400">Services</a>
+            <a href="#about" class="hover:text-yellow-400">À Propos</a>
+            <a href="#contact" class="hover:text-yellow-400">Contact</a>
+        </div>
+        <p>&copy; 2024 SMART SOLUTION IT. Tous droits réservés.</p>
+        <p class="text-gray-400 mt-2">
+            Fondateur : Tiako Tchouameni Cedric Aime |
+            <a href="mailto:Tiako1998@gmail.com" class="text-white hover:text-yellow-400">Tiako1998@gmail.com</a> |
+            Téléphone : +237 677 334 686 / +237 690 503 606 |
+            LinkedIn : <a href="https://www.linkedin.com/in/cedric-aime-tiako-tchouameni-1b621b175" class="text-white hover:text-yellow-400">Profil LinkedIn</a>
+        </p>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+        var menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+    });
+</script>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        // Affiche le bouton lorsqu'on défile vers le bas
+        window.onscroll = function() {
+            var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+    
+        // Scroll vers le haut lorsqu'on clique sur le bouton
+        document.getElementById('scrollToTopBtn').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+    
+</body>
+
+</html>
