@@ -15,7 +15,7 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="canonical" href="https://smart-solutions-it.vercel.app/">
     <script type="application/ld+json">
     {
@@ -31,133 +31,7 @@
         }
     }
     </script>
-    <style>
-        /* Styles personnalisés */
-        .hover-effect:hover {
-            transform: scale(1.05);
-            transition: transform 0.3s ease-in-out;
-        }
 
-        /* Réactivité pour le menu mobile */
-        #mobile-menu {
-            display: none;
-        }
-
-        @media (max-width: 768px) {
-            #mobile-menu {
-                display: flex;
-            }
-        }
-
-        /* Styles pour les icônes de services */
-        .icon-container {
-            width: 80px;
-            height: 80px;
-            background-color: #e2e8f0;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-
-        .service-icon {
-            width: 50%;
-            height: 50%;
-            object-fit: contain;
-            transition: transform 0.3s ease;
-        }
-
-        /* Styles pour les cartes de service */
-        .service-card {
-            border: 2px solid transparent;
-            border-radius: 15px;
-            transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .service-card:hover {
-            border-color: #1E3A8A; /* Bleu primaire */
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(30, 58, 138, 0.2); /* Ombre bleutée */
-        }
-
-        .service-card:hover .icon-container {
-            background-color: #1E3A8A; /* Bleu primaire */
-            transform: rotate(360deg);
-        }
-
-        .service-card:hover .service-icon {
-            transform: scale(1.2);
-        }
-
-        /* Harmonisation des couleurs */
-        .bg-blue-900 {
-            background-color: #1E3A8A; /* Bleu primaire */
-        }
-
-        .bg-yellow-500 {
-            background-color: #F59E0B; /* Jaune doré */
-        }
-
-        .hover:bg-yellow-400 {
-            background-color: #FBBF24; /* Jaune plus clair */
-        }
-
-        .hover:text-yellow-400 {
-            color: #F59E0B; /* Jaune doré */
-        }
-
-        .text-yellow-400 {
-            color: #F59E0B; /* Jaune doré */
-        }
-
-        .text-green-900 {
-            color: #065F46; /* Vert foncé */
-        }
-
-        .bg-gradient-to-r {
-            background: linear-gradient(to right, #065F46, #059669); /* Dégradé de vert foncé à vert vif */
-        }
-
-        .bg-gray-50 {
-            background-color: #F9FAFB; /* Gris très clair */
-        }
-
-        .bg-white {
-            background-color: #FFFFFF; /* Blanc pur */
-        }
-
-        .bg-gray-100 {
-            background-color: #F3F4F6; /* Gris clair */
-        }
-
-        .bg-orange-500 {
-            background-color: #EA580C; /* Orange vif */
-        }
-        body {
-    overflow-x: hidden;
-}
-.scroll-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #1E3A8A; /* Bleu primaire */
-    color: white;
-    border: none;
-    border-radius: 50%;
-    padding: 10px;
-    font-size: 24px;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    display: none; /* Caché par défaut */
-}
-
-.scroll-to-top:hover {
-    background-color: #F59E0B; /* Jaune doré */
-}
-
-    </style>
 </head>
 <button id="scrollToTopBtn" class="scroll-to-top">
     <i class="fas fa-chevron-up"></i>
@@ -240,7 +114,7 @@
                 </div>
                 <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden text-center p-6" data-aos="fade-up">
                     <div class="icon-container mx-auto mb-4">
-                        <img src="images/referencement.png" alt="Référencement et SEO" class="service-icon">
+                        <img src="images/reglage.png" alt="Référencement et SEO" class="service-icon">
                     </div>
                     <h3 class="text-xl font-bold text-green-700 mb-4">Référencement et SEO</h3>
                     <p class="text-gray-600">Optimisation des moteurs de recherche, campagnes publicitaires ciblées et conseils en marketing digital pour accroître votre visibilité en ligne.</p>
@@ -250,7 +124,7 @@
     </section>
 
         <!-- Team Section -->
-    <section id="team" class="py-16 bg-gray-50">
+    <!-- <section id="team" class="py-16 bg-gray-50">
         <div class="container mx-auto text-center">
             <h2 class="text-3xl font-bold text-green-700 mb-12" data-aos="fade-left">Notre Équipe</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -260,10 +134,36 @@
                         <p class="text-gray-600">Fondateur et Consultant Principal. Spécialiste en stratégie numérique et développement web.</p>
                     
                 </div>
-                <!-- Répétez ce bloc pour chaque membre de l'équipe -->
+                <div class="bg-white rounded-lg p-6 shadow-lg" data-aos="fade-up">
+                    <img src="images/claude.jpg" alt="Nom du membre" class="w-32 h-32 mx-auto rounded-full mb-4">
+                    <h3 class="text-xl font-bold text-green-700 mb-4">Fomo Ndanda Claude</h3>
+                        <p class="text-gray-600">DDéveloppeur web & mobile💻 || Cybersécurité⚔️ || CTF Player🛡️ || Pentester🛠️</p>
+                    
+                </div>
+                 Répétez ce bloc pour chaque membre de l'équipe 
             </div>
         </div>
-    </section>
+    </section> -->
+
+  <!-- Team Section -->
+<section id="team" class="py-16 bg-gray-50">
+    <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold text-green-700 mb-12" data-aos="fade-left">Notre Équipe</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="bg-white rounded-lg p-6 shadow-lg" data-aos="fade-up">
+                <img src="images/cedric.jpg" alt="Nom du membre" class="w-32 h-32 mx-auto rounded-full mb-4 object-cover">
+                <h3 class="text-xl font-bold text-green-700 mb-4">Tiako Tchouameni Cedric Aime</h3>
+                <p class="text-gray-600">Fondateur et Consultant Principal 💼<br>Spécialiste en stratégie numérique 🧠  développement web & mobile 💻</p>
+            </div>
+            <div class="bg-white rounded-lg p-6 shadow-lg" data-aos="fade-up">
+                <img src="images/claude.png" alt="Nom du membre" class="w-32 h-32 mx-auto rounded-full mb-4 object-cover">
+                <h3 class="text-xl font-bold text-green-700 mb-4">Fomo Ndanda Claude</h3>
+                <p class="text-gray-600">Développeur web & mobile 💻<br>Cybersécurité ⚔️<br>CTF Player 🛡️<br>Pentester 🛠️</p>
+            </div>
+            <!-- Répétez ce bloc pour chaque membre de l'équipe -->
+        </div>
+    </div>
+</section>
 
 <!-- Special Offer Section -->
 <section id="special-offer" class="py-16 bg-yellow-100">
