@@ -40,5 +40,45 @@ export const projects: ProjectType[] = [
     imageUrl: "https://images.pexels.com/photos/8353841/pexels-photo-8353841.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&fit=crop",
     category: "Fintech",
     link: "https://peppy-kleicha-717690.netlify.app"
-  }
+  },
+    {
+      "id": 6,
+      "title": "Smart Job",
+      "description": "Plateforme web pour la publication et la recherche d'offres d'emploi au Cameroun",
+      "imageUrl": "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&fit=crop",
+      "category": "Emploi",
+      "link": "https://smart-job-nine.vercel.app"
+    },
+    {
+      "id": 7,
+      "title": "Ummi’s Collection",
+      "description": "Boutique en ligne pour la vente de vêtements et accessoires avec redirection WhatsApp",
+      "imageUrl": "https://images.pexels.com/photos/5704843/pexels-photo-5704843.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&fit=crop",
+      "category": "E-commerce",
+      "link": "https://ummi-s-collection.vercel.app"
+    },
+    {
+      "id": 8,
+      "title": "Wellness",
+      "description": "Site dédié au bien-être, au développement personnel et aux services de coaching",
+      "imageUrl": "https://images.pexels.com/photos/4056723/pexels-photo-4056723.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&fit=crop",
+      "category": "Santé & Bien-être",
+      "link": "https://wellness-kappa.vercel.app"
+    },
+    {
+      "id": 9,
+      "title": "Tuto Camer",
+      "description": "Plateforme éducative de tutoriels pour former les jeunes au numérique",
+      "imageUrl": "https://images.pexels.com/photos/4144223/pexels-photo-4144223.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&fit=crop",
+      "category": "Éducation",
+      "link": "https://tuto-camer.vercel.app/"
+    },
+    {
+      "id": 10,
+      "title": "Buzz237",
+      "description": "Site d’actualités et de divertissement camerounais avec interface de blog dynamique",
+      "imageUrl": "https://images.pexels.com/photos/5706036/pexels-photo-5706036.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&fit=crop",
+      "category": "Média",
+      "link": "https://buzz237.vercel.app/"
+    }
 ];
